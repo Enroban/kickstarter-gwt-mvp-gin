@@ -5,21 +5,22 @@
          version="2.5"
          xmlns="http://java.sun.com/xml/ns/javaee">
 
-    <display-name>anaisHD</display-name>
+    <display-name>jeanne</display-name>
 
   <!-- Servlets -->
-  <servlet>
-    <servlet-name>log</servlet-name>
-    <servlet-class>org.theresis.anaisHD.server.rpc.LogRPCServiceImpl</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>log</servlet-name>
-    <url-pattern>/AnaisHD/log</url-pattern>
-  </servlet-mapping>
+<!--   <servlet> -->
+<!--     <servlet-name>log</servlet-name> -->
+<!--     <servlet-class>org.theresis.anaisHD.server.rpc.LogRPCServiceImpl</servlet-class> -->
+<!--   </servlet> -->
+<!--   <servlet-mapping> -->
+<!--     <servlet-name>log</servlet-name> -->
+<!--     <url-pattern>/AnaisHD/log</url-pattern> -->
+<!--   </servlet-mapping> -->
+
     
   <!-- Default page to serve -->
   <welcome-file-list>
-    <welcome-file>AnaisHD.html</welcome-file>
+    <welcome-file>Jeanne.html</welcome-file>
   </welcome-file-list>
 
 </web-app>

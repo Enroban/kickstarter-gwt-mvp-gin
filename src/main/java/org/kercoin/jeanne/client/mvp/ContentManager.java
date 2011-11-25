@@ -1,0 +1,34 @@
+package org.kercoin.jeanne.client.mvp;
+
+import org.kercoin.jeanne.client.activity.MainActivity;
+
+import com.google.gwt.event.shared.EventBus;
+import com.google.gwt.place.shared.PlaceChangeEvent;
+import com.google.gwt.user.client.ui.AcceptsOneWidget;
+import com.google.inject.Inject;
+import com.google.inject.Provider;
+
+public class ContentManager implements PlaceChangeEvent.Handler {
+
+	private AcceptsOneWidget display;
+
+	@Inject
+	private Provider<MainActivity> menuActivityProvider;
+
+	@Inject
+	private EventBus eventBus;
+
+	@Override
+	public void onPlaceChange(final PlaceChangeEvent event) {
+
+		final MainActivity menuActivity = menuActivityProvider.get();
+		menuActivity.start(display, eventBus);
+
+	}
+
+	public void setDisplay(final AcceptsOneWidget simplePanel) {
+		display = simplePanel;
+		eventBus.addHandler(PlaceChangeEvent.TYPE, this);
+	}
+
+}

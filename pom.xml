@@ -13,8 +13,8 @@
     <name>Jeanne</name>
 
     <properties>
-        <gwt.version>2.4.0</gwt.version>
-        <gin.version>1.5.0</gin.version>
+		<gwt.version>2.5.0</gwt.version>
+		<gin.version>2.0.0</gin.version>
         <junit.version>4.11</junit.version>
         <mockito.version>1.9.0</mockito.version>
         <fest.version>1.4</fest.version>
