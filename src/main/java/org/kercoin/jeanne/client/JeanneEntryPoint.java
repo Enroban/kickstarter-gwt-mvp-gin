@@ -6,5 +6,6 @@ public class JeanneEntryPoint implements EntryPoint {
 
 	@Override
 	public void onModuleLoad() {
+
 	}
 }
