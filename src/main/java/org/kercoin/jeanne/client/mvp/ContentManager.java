@@ -1,6 +1,6 @@
 package org.kercoin.jeanne.client.mvp;
 
-import org.kercoin.jeanne.client.activity.MainActivity;
+import org.kercoin.jeanne.client.activity.MenuActivity;
 
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.place.shared.PlaceChangeEvent;
@@ -13,7 +13,7 @@ public class ContentManager implements PlaceChangeEvent.Handler {
 	private AcceptsOneWidget display;
 
 	@Inject
-	private Provider<MainActivity> menuActivityProvider;
+	private Provider<MenuActivity> menuActivityProvider;
 
 	@Inject
 	private EventBus eventBus;
@@ -21,7 +21,7 @@ public class ContentManager implements PlaceChangeEvent.Handler {
 	@Override
 	public void onPlaceChange(final PlaceChangeEvent event) {
 
-		final MainActivity menuActivity = menuActivityProvider.get();
+		final MenuActivity menuActivity = menuActivityProvider.get();
 		menuActivity.start(display, eventBus);
 
 	}

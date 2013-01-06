@@ -1,7 +1,7 @@
 package org.kercoin.jeanne.client.mvp;
 
-import org.kercoin.jeanne.client.activity.VisualisationActivity;
-import org.kercoin.jeanne.client.place.VisualisationPlace;
+import org.kercoin.jeanne.client.activity.HomeActivity;
+import org.kercoin.jeanne.client.place.HomePlace;
 
 import com.google.gwt.activity.shared.Activity;
 import com.google.gwt.activity.shared.ActivityMapper;
@@ -12,12 +12,12 @@ import com.google.inject.Provider;
 public class AppActivityMapper implements ActivityMapper {
 
 	@Inject
-	Provider<VisualisationActivity> visualisationActivityProvider;
+	Provider<HomeActivity> homeActivityProvider;
 
 	@Override
 	public Activity getActivity(final Place place) {
-		if (place instanceof VisualisationPlace) {
-			return visualisationActivityProvider.get().setPlace(place);
+		if (place instanceof HomePlace) {
+			return homeActivityProvider.get().setPlace(place);
 		}
 
 		return null;

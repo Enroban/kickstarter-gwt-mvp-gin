@@ -1,20 +1,20 @@
-package org.kercoin.jeanne.client.ui.visu;
+package org.kercoin.jeanne.client.ui.home;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
 
-public class VisualisationViewImpl extends Composite implements VisualisationView {
+public class HomeViewImpl extends Composite implements HomeView {
 
-	private static VisualisationViewImplUiBinder uiBinder = GWT.create(VisualisationViewImplUiBinder.class);
+	private static HomeViewImplUiBinder uiBinder = GWT.create(HomeViewImplUiBinder.class);
 
-	interface VisualisationViewImplUiBinder extends UiBinder<Widget, VisualisationViewImpl> {
+	interface HomeViewImplUiBinder extends UiBinder<Widget, HomeViewImpl> {
 	}
 
 	private Presenter presenter;
 
-	public VisualisationViewImpl() {
+	public HomeViewImpl() {
 		initWidget(uiBinder.createAndBindUi(this));
 	}
 

@@ -1,7 +1,7 @@
 package org.kercoin.jeanne.client.activity;
 
 
-import org.kercoin.jeanne.client.ui.main.MainView;
+import org.kercoin.jeanne.client.ui.menu.MenuView;
 
 import com.google.gwt.activity.shared.AbstractActivity;
 import com.google.gwt.event.shared.EventBus;
@@ -10,13 +10,13 @@ import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.inject.Inject;
 
-public class MainActivity extends AbstractActivity implements MainView.Presenter {
+public class MenuActivity extends AbstractActivity implements MenuView.Presenter {
 
 	@Inject
 	private PlaceController placeController;
 
 	@Inject
-	private MainView view;
+	private MenuView view;
 
 	@Override
 	public void start(final AcceptsOneWidget panel, final EventBus eventBus) {

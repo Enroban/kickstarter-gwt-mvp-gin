@@ -3,11 +3,11 @@ package org.kercoin.jeanne.client.gin;
 import org.kercoin.jeanne.client.mvp.AppActivityMapper;
 import org.kercoin.jeanne.client.mvp.AppPlaceController;
 import org.kercoin.jeanne.client.mvp.AppPlaceHistoryMapper;
-import org.kercoin.jeanne.client.place.VisualisationPlace;
-import org.kercoin.jeanne.client.ui.main.MainView;
-import org.kercoin.jeanne.client.ui.main.MainViewImpl;
-import org.kercoin.jeanne.client.ui.visu.VisualisationView;
-import org.kercoin.jeanne.client.ui.visu.VisualisationViewImpl;
+import org.kercoin.jeanne.client.place.HomePlace;
+import org.kercoin.jeanne.client.ui.home.HomeView;
+import org.kercoin.jeanne.client.ui.home.HomeViewImpl;
+import org.kercoin.jeanne.client.ui.menu.MenuView;
+import org.kercoin.jeanne.client.ui.menu.MenuViewImpl;
 
 import com.google.gwt.activity.shared.ActivityManager;
 import com.google.gwt.activity.shared.ActivityMapper;
@@ -29,8 +29,8 @@ public class JeanneModule extends AbstractGinModule {
 		bind(ActivityMapper.class).to(AppActivityMapper.class).in(Singleton.class);
 		bind(AppPlaceHistoryMapper.class).in(Singleton.class);
 
-		bind(MainView.class).to(MainViewImpl.class).in(Singleton.class);
-		bind(VisualisationView.class).to(VisualisationViewImpl.class).in(Singleton.class);
+		bind(MenuView.class).to(MenuViewImpl.class).in(Singleton.class);
+		bind(HomeView.class).to(HomeViewImpl.class).in(Singleton.class);
 	}
 
 	@Singleton
@@ -49,7 +49,7 @@ public class JeanneModule extends AbstractGinModule {
 	@Provides
 	PlaceHistoryHandler getPlaceHistoryHandler(final AppPlaceHistoryMapper historyMapper, final EventBus eventBus, final PlaceController placeController) {
 		final PlaceHistoryHandler historyHandler = new PlaceHistoryHandler(historyMapper);
-		historyHandler.register(placeController, eventBus, new VisualisationPlace());
+		historyHandler.register(placeController, eventBus, new HomePlace());
 		return historyHandler;
 	}
 

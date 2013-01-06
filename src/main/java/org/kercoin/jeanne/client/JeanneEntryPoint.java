@@ -14,14 +14,14 @@ public class JeanneEntryPoint implements EntryPoint {
 
 		final JeanneGinjector ginjector = GWT.create(JeanneGinjector.class);
 
-		final SimplePanel displayMain = ginjector.getWidget();
-		ginjector.getContentManager().setDisplay(displayMain);
+		final SimplePanel menuDisplay = ginjector.getWidget();
+		ginjector.getContentManager().setDisplay(menuDisplay);
 
-		final SimplePanel displayContent = ginjector.getWidget();
-		ginjector.getActivityManager().setDisplay(displayContent);
+		final SimplePanel activityDisplay = ginjector.getWidget();
+		ginjector.getActivityManager().setDisplay(activityDisplay);
 
-		RootPanel.get().add(displayMain);
-		RootPanel.get().add(displayContent);
+		RootPanel.get().add(menuDisplay);
+		RootPanel.get().add(activityDisplay);
 
 		ginjector.getPlaceHistoryHandler().handleCurrentHistory();
 	}

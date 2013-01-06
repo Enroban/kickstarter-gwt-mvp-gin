@@ -2,8 +2,8 @@ package org.kercoin.jeanne.client.activity;
 
 
 import org.kercoin.jeanne.client.mvp.HasPlace;
-import org.kercoin.jeanne.client.place.VisualisationPlace;
-import org.kercoin.jeanne.client.ui.visu.VisualisationView;
+import org.kercoin.jeanne.client.place.HomePlace;
+import org.kercoin.jeanne.client.ui.home.HomeView;
 
 import com.google.gwt.activity.shared.AbstractActivity;
 import com.google.gwt.activity.shared.Activity;
@@ -13,15 +13,15 @@ import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.inject.Inject;
 
-public class VisualisationActivity extends AbstractActivity implements HasPlace, VisualisationView.Presenter {
+public class HomeActivity extends AbstractActivity implements HasPlace, HomeView.Presenter {
 
 	@Inject
-	private VisualisationView view;
+	private HomeView view;
 
 	@Inject
 	private PlaceController placeController;
 
-	private VisualisationPlace place;
+	private HomePlace place;
 
 	@Override
 	public void start(final AcceptsOneWidget panel, final EventBus eventBus) {
@@ -36,7 +36,7 @@ public class VisualisationActivity extends AbstractActivity implements HasPlace,
 
 	@Override
 	public Activity setPlace(final Place place) {
-		this.place = (VisualisationPlace) place;
+		this.place = (HomePlace) place;
 		return this;
 	}
 

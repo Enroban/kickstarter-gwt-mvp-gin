@@ -1,20 +1,20 @@
-package org.kercoin.jeanne.client.ui.main;
+package org.kercoin.jeanne.client.ui.menu;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
 
-public class MainViewImpl extends Composite implements MainView {
+public class MenuViewImpl extends Composite implements MenuView {
 
-	private static MainViewImplUiBinder uiBinder = GWT.create(MainViewImplUiBinder.class);
+	private static MenuViewImplUiBinder uiBinder = GWT.create(MenuViewImplUiBinder.class);
 
-	interface MainViewImplUiBinder extends UiBinder<Widget, MainViewImpl> {
+	interface MenuViewImplUiBinder extends UiBinder<Widget, MenuViewImpl> {
 	}
 
 	private Presenter presenter;
 
-	public MainViewImpl() {
+	public MenuViewImpl() {
 		initWidget(uiBinder.createAndBindUi(this));
 	}
 
