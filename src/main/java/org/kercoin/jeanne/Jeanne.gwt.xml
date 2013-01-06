@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='Jeanne'>
+
+	<entry-point class='org.kercoin.jeanne.client.JeanneEntryPoint' />
+	<source path='client' />
+	<source path='shared' />
+
+	<inherits name='com.google.gwt.user.User' />
+
+	<inherits name='com.google.gwt.user.theme.clean.Clean' />
+
+	<!-- Other module inherits -->
+	<!-- MVP -->
+	<inherits name="com.google.gwt.activity.Activity" />
+	<inherits name="com.google.gwt.place.Place" />
+	<!-- GIN -->
+	<inherits name="com.google.gwt.inject.Inject" />
+	<!-- I18N -->
+	<inherits name="com.google.gwt.i18n.I18N" />
+
+	<set-configuration-property name="UiBinder.useSafeHtmlTemplates" value="true" />
+
+	<set-property name="user.agent" value="gecko1_8" />
+	
+</module>
