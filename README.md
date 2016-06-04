@@ -1,9 +1,4 @@
 MVP-Gin
 ======
 
-Projet GWT sous Maven implémentant MVP en utilisant Gin.
-
-L'IHM est composée de 2 sections :
-  * un menu fixe
-  * une zone de contenu
-
+Kickstarter for a project in GWT built with Maven. It's using MVP implementation.
